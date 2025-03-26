@@ -1,0 +1,74 @@
+<html>
+    <html>
+        <head>
+        <title>Campaign</title>
+        </head>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                padding: 20px;
+                background-color: #f4f4f4;
+            }
+            .container {
+                max-width: 500px;
+                background: white;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            h1 {
+                text-align: center;
+            }
+            label {
+                font-weight: bold;
+            }
+            input, button {
+                padding: 5px;
+                margin: 10px 0;
+            }
+            
+        </style>
+        <body>
+            <header>
+            <h1>Fight Against Child Hunger</h1>
+            <p>Millions of children worldwide go to bed hungry every night, lacking the basic nutrition they need to grow, learn, and thrive. Our charity is dedicated to ending child hunger by providing meals, supporting sustainable food programs, and ensuring every child has access to proper nutrition. The reasons why we support this cause is because every child deserves a healthy start in life. Malnutrition stunts growth and affects cognitive developmenet, limiting a child's future potential. Hunger affects education. A hungry child struggles to focus in school, leading to lower academic performance. We can make a difference together. Even small contributions help provide nutritious meals and create sustainable solutions for communities in need.</p>
+            </header>
+        <form id="signup">
+        <fieldset form="signup">
+        <legend>Sign up Form: </legend>
+        <label for="firstName">First Name:</label><br/>
+                <input type="text" id="firstName" name="firstName" required><br/>
+                <label for="lastName">Last Name:</label><br/>
+                <input type="text" id="lastName" name="lastName" required><br/>
+                <p>Sex:</p>
+                <input type="radio" id="male" name="sex" value="male">
+                <label for="male">Male</label></br>
+                <input type="radio" id="female" name="sex" value="female">
+                <label for="female">Female</label></br>
+                <input type="radio" id="prf" name="sex" value="prf">
+                <label for="prf">Prefer not to say</label> <br/><br/>     
+                <label for="email">Email Address:</label><br/>
+                <input type="text" id="email" name="email" required><br/>
+                <label for="num">Contact Number:</label><br/>
+                <input type="num" id="num" name="num"><br/><br/>
+                <input type = "submit" value = "Submit form">
+                <input type = "reset" value = "Clear">
+        </fieldset>
+        </form>
+
+
+    </body>
+<script>
+    document.getElementById("signupform").addEventListener("submit", function(event) {
+        let inputs = document.querySelectorAll("input[required]");
+        for (let input of inputs) {
+            if (!input.value) {
+                alert("Please fill out this field.");
+                event.preventDefault();
+                return;
+            }
+        }
+    })
+</script>
+</html>
